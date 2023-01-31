@@ -2,7 +2,7 @@ import { Link, Route, Switch } from 'react-router-dom';
 import './App.css';
 
 import Charts from './services/components/Charts/Charts.js';
-import Table from './services/components/Table/Table.js';
+import Table from './services/components/TableComp/TableComp.js';
 
 function App() {
   return (

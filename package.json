@@ -18,6 +18,7 @@
     "react-dom": "^18.2.0",
     "react-router-dom": "^5.3.0",
     "react-scripts": "5.0.1",
+    "rsuite": "^5.25.0",
     "rsuite-table": "^5.8.2",
     "victory": "^36.6.8",
     "web-vitals": "^2.1.4"

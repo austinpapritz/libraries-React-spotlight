@@ -1,16 +1,16 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import './TableComp.css';
 
-import fakeData from '../../../data/data.js';
+import fakeData from '../../data/data.js';
 
+import 'rsuite/dist/rsuite.min.css';
 import { Table, Column, HeaderCell, Cell } from 'rsuite-table';
-import 'rsuite-table/lib/less/index.less'; // or 'rsuite-table/dist/css/rsuite-table.css'
 
 export default function TableComp() {
   // data is empty initially
-  const [data, setData] = React.useState([]);
+  const [data, setData] = useState([]);
 
-  React.useEffect(() => {
+  useEffect(() => {
     // We load data after first render
     setData(fakeData);
   }, []);
@@ -36,13 +36,13 @@ export default function TableComp() {
       </Column>
 
       <Column width={130} fixed>
-        <HeaderCell>First Name</HeaderCell>
-        <Cell dataKey="firstName" />
+        <HeaderCell>Last Name</HeaderCell>
+        <Cell dataKey="lastName" />
       </Column>
 
       <Column width={130}>
-        <HeaderCell>Last Name</HeaderCell>
-        <Cell dataKey="lastName" />
+        <HeaderCell>First Name</HeaderCell>
+        <Cell dataKey="firstName" />
       </Column>
 
       <Column width={200}>
@@ -58,11 +58,6 @@ export default function TableComp() {
       <Column width={200}>
         <HeaderCell>Company</HeaderCell>
         <Cell dataKey="company" />
-      </Column>
-
-      <Column width={200}>
-        <HeaderCell>Email</HeaderCell>
-        <Cell dataKey="email" />
       </Column>
 
       <Column width={200}>

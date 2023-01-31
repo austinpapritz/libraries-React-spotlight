@@ -15,8 +15,9 @@ export default function TableComp() {
     setData(fakeData);
   }, []);
 
-  const handleScroll = (x, y) => {
+  const handleScroll = () => {
     // This should print 200 under normal conditions
+    // eslint-disable-next-line no-console
     console.log(data.length);
   };
 
@@ -28,6 +29,7 @@ export default function TableComp() {
         onScroll={handleScroll}
         cellBordered
         onRowClick={(data) => {
+          // eslint-disable-next-line no-console
           console.log(data);
         }}
       >

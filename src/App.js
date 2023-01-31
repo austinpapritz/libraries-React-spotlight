@@ -3,13 +3,18 @@ import './App.css';
 
 import Charts from './components/Charts/Charts.js';
 import TableComp from './components/TableComp/TableComp.js';
+import Button from '@mui/material/Button';
 
 function App() {
   return (
     <div className="App">
       <nav>
-        <Link to="/table">Table</Link>
-        <Link to="/charts">Charts</Link>
+        <Link to="/table">
+          <Button variant="contained">Table</Button>
+        </Link>
+        <Link to="/charts">
+          <Button variant="contained">Chart</Button>
+        </Link>
       </nav>
       <Switch>
         <Route path="/table">

@@ -16,30 +16,35 @@ const ImageCell = ({ rowData, dataKey, ...rest }) => (
   </Cell>
 );
 
-const TableComp = () => (
-  <Table data={dataList}>
-    <Column width={100} sortable fixed resizable>
-      <HeaderCell>ID</HeaderCell>
-      <Cell dataKey="id" />
-    </Column>
+export default function TableComp() {
+  return (
+    <>
+      <p>test</p>
+      <Table data={dataList}>
+        <Column width={100} sortable fixed resizable>
+          <HeaderCell>ID</HeaderCell>
+          <Cell dataKey="id" />
+        </Column>
 
-    <Column width={100} sortable resizable>
-      <HeaderCell>Name</HeaderCell>
-      <Cell dataKey="name" />
-    </Column>
+        <Column width={100} sortable resizable>
+          <HeaderCell>Name</HeaderCell>
+          <Cell dataKey="name" />
+        </Column>
 
-    <Column width={100} sortable resizable>
-      <HeaderCell>Email</HeaderCell>
-      <Cell>
-        {(rowData, rowIndex) => {
-          return <a href={`mailto:${rowData.email}`}>{rowData.email}</a>;
-        }}
-      </Cell>
-    </Column>
+        <Column width={100} sortable resizable>
+          <HeaderCell>Email</HeaderCell>
+          <Cell>
+            {(rowData, rowIndex) => {
+              return <a href={`mailto:${rowData.email}`}>{rowData.email}</a>;
+            }}
+          </Cell>
+        </Column>
 
-    <Column width={100} resizable>
-      <HeaderCell>Avartar</HeaderCell>
-      <ImageCell dataKey="avartar" />
-    </Column>
-  </Table>
-);
+        <Column width={100} resizable>
+          <HeaderCell>Avartar</HeaderCell>
+          <ImageCell dataKey="avartar" />
+        </Column>
+      </Table>
+    </>
+  );
+}

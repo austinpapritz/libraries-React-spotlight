@@ -2,7 +2,7 @@ import { Link, Route, Switch } from 'react-router-dom';
 import './App.css';
 
 import Charts from './services/components/Charts/Charts.js';
-import Table from './services/components/TableComp/TableComp.js';
+import TableComp from './services/components/TableComp/TableComp.js';
 
 function App() {
   return (
@@ -12,11 +12,13 @@ function App() {
         <Link to="/charts">Charts</Link>
       </nav>
       <Switch>
-        <Route path="/table" component={Table}>
+        <Route path="/table">
           <h1>Table Libary</h1>
+          <TableComp />
         </Route>
-        <Route path="/charts" component={Charts}>
+        <Route path="/charts">
           <h1>Chart Library</h1>
+          <Charts />
         </Route>
       </Switch>
     </div>

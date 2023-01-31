@@ -1,5 +1,5 @@
 import { Link, Route, Switch } from 'react-router-dom';
-// import './App.css';
+import './App.css';
 
 import Charts from './components/Charts/Charts.js';
 import TableComp from './components/TableComp/TableComp.js';

@@ -1,7 +1,13 @@
 nav {
   display: flex;
   justify-content: center;
+  gap: 15px;
 }
 a {
   margin: 5px;
+  font-size: 2rem;
+}
+
+h1 {
+  line-height: 0;
 }
